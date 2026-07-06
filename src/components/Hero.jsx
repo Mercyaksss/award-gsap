@@ -87,7 +87,7 @@ function Hero() {
 
     const getVideoSrc = (index) => `videos/hero-${index}.mp4`
   return (
-    <div className='relative h-dvh w-screen overflow-x-hidden'>
+    <div className='relative h-dvh w-screen overflow-x-hidden bg-[var(--blue-75)]'>
 
         {isLoading && (
 
@@ -119,6 +119,7 @@ function Hero() {
                     src={getVideoSrc(currentIndex)}
                     loop
                     muted
+                    preload="auto"
                     id='next-video'
                     className='absolute-center invisible absolute z-20 size-64 object-cover object-center'
                     onLoadedData={handleVideoLoad}                   
